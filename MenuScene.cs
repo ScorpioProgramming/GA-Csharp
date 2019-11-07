@@ -27,7 +27,7 @@ namespace Pac.Scene
 
         private MenuScene()
         {
-            Game1.sound.begin();
+            Game1.sound.Begin();
         }
 
         KeyboardState prev;
@@ -53,10 +53,10 @@ namespace Pac.Scene
                     }
                     return LoadingScene.GetInstance();
                 }
-                else if (index == 1)
-                    return InstructionScene.GetInstance(this);
-                else if (index == 2)
-                    return CreditScene.GetInstance(this);
+                //else if (index == 1)
+                //    return InstructionScene.GetInstance(this);
+                //else if (index == 2)
+                //    return CreditScene.GetInstance(this);
                 else
                     return null;
             }
@@ -79,7 +79,7 @@ namespace Pac.Scene
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin(SpriteBlendMode.AlphaBlend);
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
             spriteBatch.Draw(GameTexture.levelBackgroundSprite, new Rectangle(ToX(0), ToY(0), ToX(800), ToY(600)), Color.White);
 
             spriteBatch.Draw(GameTexture.menuSprite, new Rectangle(ToX(0), ToY(0), ToX(800), ToY(600)), Color.White);

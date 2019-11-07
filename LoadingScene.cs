@@ -62,7 +62,7 @@ namespace Pac.Scene
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             timeup += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            spriteBatch.Begin(SpriteBlendMode.AlphaBlend);
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
             spriteBatch.Draw(GameTexture.levelBackgroundSprite, new Rectangle(ToX(0), ToY(0), ToX(800), ToY(600)), Color.White);
             spriteBatch.Draw(GameTexture.startScreenSprite, new Rectangle(ToX(250), ToY(150), ToX(300), ToY(300)), Color.White);
             if (timeup > 0.5f)

@@ -120,7 +120,6 @@ namespace Pac.Index
 
                     first = false;
                 }
-                
             }
         }
 

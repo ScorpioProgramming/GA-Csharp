@@ -39,7 +39,7 @@ namespace Pac.GhostAlgorithm
             int spX = pacman.speedX == 0 ? 0 : pacman.speedX / Math.Abs(pacman.speedX);
             int spY = pacman.speedY == 0 ? 0 : pacman.speedY / Math.Abs(pacman.speedY);
 
-            while (!PathIndexer.isIntersection(toMove.Y, toMove.X)&&!dontForecast)
+            while (!PathIndexer.IsIntersection(toMove.Y, toMove.X)&&!dontForecast)
             {
                 if (pacman.speedX == 0 && pacman.speedY == 0)
                     break;
@@ -55,7 +55,7 @@ namespace Pac.GhostAlgorithm
                     break;
                 }
 
-                if (PathIndexer.isIntersection(toMove.Y, toMove.X) && ((Math.Abs(toMove.X - pac.X) + Math.Abs(toMove.Y - pac.Y)) <= 3))
+                if (PathIndexer.IsIntersection(toMove.Y, toMove.X) && ((Math.Abs(toMove.X - pac.X) + Math.Abs(toMove.Y - pac.Y)) <= 3))
                 {
                     String dir = pacman.speedX == 0 ? pacman.speedY / Math.Abs(pacman.speedY) > 0 ? "D" : "U" : pacman.speedX / Math.Abs(pacman.speedX) > 0 ? "R" : "L";
                     String next = getRandomDirection(toMove.X, toMove.Y,dir);

@@ -57,7 +57,7 @@ namespace Pac.Scene
             }
 
             Ghost.timeForScatter = -2;
-            Game1.sound.begin();
+            Game1.sound.Begin();
         }
 
         private PacmanScene()
@@ -172,14 +172,14 @@ namespace Pac.Scene
                     {
                         pac.score += GameConstants.GHOST_EAT_SCORE;
                         ghosts[i].intializePosition(i);
-                        Game1.sound.eat();
+                        Game1.sound.Eat();
                     }
                     else
                     {
                         pac.bound = new Vector2(Pacman.init.X, Pacman.init.Y);
                         pac.speedX = pac.speedY = 0;
                         pac.lives--;
-                        Game1.sound.dead();
+                        Game1.sound.Dead();
                         for (int j = 0; j < GameConstants.NO_OF_GHOSTS; j++)
                             ghosts[j].intializePosition(j);
                     }
@@ -245,7 +245,7 @@ namespace Pac.Scene
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin(SpriteBlendMode.AlphaBlend);
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
             spriteBatch.Draw(GameTexture.levelBackgroundSprite, new Rectangle(ToX(0), ToY(0), ToX(800), ToY(600)), Color.White);
             DrawMap(spriteBatch);
 

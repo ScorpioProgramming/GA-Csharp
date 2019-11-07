@@ -40,7 +40,7 @@ namespace Pac.Scene
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Begin(SpriteBlendMode.AlphaBlend);
+            spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend);
             spriteBatch.Draw(GameTexture.levelBackgroundSprite, new Rectangle(ToX(0), ToY(0), ToX(800), ToY(600)), Color.White);
 
             spriteBatch.Draw(GameTexture.creditsSprite, new Rectangle(ToX(0), ToY(0), ToX(800), ToY(600)), Color.White);

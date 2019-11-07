@@ -17,7 +17,7 @@ namespace Pac.App
         SpriteBatch spriteBatch;
         public static Sound sound;
         BaseScene baseScene;
-        
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -25,7 +25,7 @@ namespace Pac.App
             graphics.PreferMultiSampling = false;
             graphics.PreferredBackBufferWidth = 1024;
             graphics.PreferredBackBufferHeight = 768;
-            graphics.IsFullScreen = true;
+            graphics.IsFullScreen = false;      // If wanted fullscreen change to true
             graphics.ApplyChanges();
         }
 

@@ -59,7 +59,7 @@ namespace Pac.Character
                 GameConstants.pelletsLeft--;
                 pelletEatenTime = 0;
                 pelletsEaten++;
-                Game1.sound.eat();
+                Game1.sound.Eat();
             }
             else if (GameConstants.MAP[y1, x1] == GameConstants.MAP_POWERUP)
             {
@@ -70,7 +70,7 @@ namespace Pac.Character
                 GameConstants.pelletsLeft--;
                 pelletEatenTime = 0;
                 pelletsEaten++;
-                Game1.sound.eat();
+                Game1.sound.Eat();
                 return true;
             }
             return false;

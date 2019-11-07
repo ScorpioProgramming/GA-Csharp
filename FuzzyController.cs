@@ -24,17 +24,17 @@ namespace Pac.Fuzzy
         {
             double forecast_weight;
             double hunter_weight;
-            double shy_weight = 1 + PacmanScene.getInstance().level/2;
-            double random_weight = 1.5 + PacmanScene.getInstance().level;
+            double shy_weight = 1 + PacmanScene.GetInstance().level/2;
+            double random_weight = 1.5 + PacmanScene.GetInstance().level;
             if (pac.pelletsEaten > GameConstants.pelletsLeft)
             {
-                forecast_weight = 4 + PacmanScene.getInstance().level;
-                hunter_weight = 4 + PacmanScene.getInstance().level;
+                forecast_weight = 4 + PacmanScene.GetInstance().level;
+                hunter_weight = 4 + PacmanScene.GetInstance().level;
             }
             else
             {
-                forecast_weight = 3 + PacmanScene.getInstance().level;
-                 hunter_weight = 3 + PacmanScene.getInstance().level;
+                forecast_weight = 3 + PacmanScene.GetInstance().level;
+                 hunter_weight = 3 + PacmanScene.GetInstance().level;
             }
             double hunter = getDefuzzifiedHunter(ghosts[index],pac) * hunter_weight;
             double shy = getDefuzzifiedShy(ghosts, index, pac) * shy_weight;

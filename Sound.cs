@@ -15,22 +15,22 @@ namespace Pac.Resources
             soundE_begin = game.Content.Load<SoundEffect>("Sound/pacbegin");
         }
 
-        public void dead()
+        public void Dead()
         {
             soundE_pacdead.Play();
         }
 
-        public void eat()
+        public void Eat()
         {
             soundE_paceat.Play();
         }
 
-        public void begin()
+        public void Begin()
         {
             soundE_begin.Play();
         }
 
-        public void ghostmove()
+        public void Ghostmove()
         {
             soundBank.GetCue("Sound/pacghost").Play();
         }
