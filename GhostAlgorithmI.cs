@@ -18,7 +18,7 @@ namespace Pac.GhostAlgorithm
         {
             int k = 0;
             String[] dirAvl = new String[4];
-            //Check avl directions...
+            // Check available directions
             if (GameConstants.MAP[y1, x1 + 1] != GameConstants.MAP_WALL && closest_dir != "R")
             {
                 dirAvl[k++] = "R";

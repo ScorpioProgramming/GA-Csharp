@@ -11,7 +11,7 @@ namespace Pac.App
         {
             try
             {
-                string password = @"Hello!!!"; // Your Key Here
+                string password = @"Hello123"; // Hash key
                 UnicodeEncoding UE = new UnicodeEncoding();
                 byte[] key = UE.GetBytes(password);
 
@@ -39,8 +39,8 @@ namespace Pac.App
                 Console.WriteLine("Exception in Encryption");
             }
         }
-
-        /// Decrypts a file using Rijndael algorithm.
+        /// <summary>
+        /// Decrypts a file using algorithm.
         ///</summary>
         ///<param name="inputFile"></param>
         ///<param name="outputFile"></param>
@@ -48,7 +48,7 @@ namespace Pac.App
         {
             try
             {
-                string password = @"Hello!!!"; // Your Key Here
+                string password = @"Hello123"; // Hash key
 
                 UnicodeEncoding UE = new UnicodeEncoding();
                 byte[] key = UE.GetBytes(password);

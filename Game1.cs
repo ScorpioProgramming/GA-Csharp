@@ -25,7 +25,7 @@ namespace Pac.App
             graphics.PreferMultiSampling = false;
             graphics.PreferredBackBufferWidth = 1024;
             graphics.PreferredBackBufferHeight = 768;
-            graphics.IsFullScreen = false;      // If wanted fullscreen change to true
+            graphics.IsFullScreen = false;      // True for fullscreen
             graphics.ApplyChanges();
         }
 

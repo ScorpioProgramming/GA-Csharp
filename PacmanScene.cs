@@ -109,7 +109,7 @@ namespace Pac.Scene
                                 ghosts[j].logic = ScatterGhostAlgorithm.getInstance();
                                 ghosts[j].logicString = "Scatter";
                             }
-                            scatterTime = 1;     //Scatter for 2 seconds...
+                            scatterTime = 1;     // Scatter for 2 seconds...
                             Ghost.timeForScatter += 4 + level + scatterTime; 
                         }
                         else
@@ -123,7 +123,6 @@ namespace Pac.Scene
             }
 
             HandleMovementAndCollision(gameTime);
-            //handleWrapAround();
 
             now = pac.getPoint();
             if (prev == null || (now.X != prev.X) || (now.Y != prev.Y))
@@ -137,7 +136,7 @@ namespace Pac.Scene
             {
                 for (int i = 0; i < GameConstants.NO_OF_GHOSTS; i++)
                 {
-                    //Eaten powerup
+                    // Eaten powerup
                     ghosts[i].changeDirection();
                 }
             }
@@ -266,8 +265,6 @@ namespace Pac.Scene
                 {
                     int x = i % 4;
                     spriteBatch.Draw(GameTexture.ghostSprite, new Vector2(ToX(ghosts[i].bound.X), ToY(ghosts[i].bound.Y)), new Rectangle(0 + 21 * x * 2, 0, 21, 19), Color.White, MathHelper.ToRadians(0), new Vector2(ToX(8), ToY(10)), 1f, ghosts[i].spriteDirection, 0);
-                    //spriteBatch.Draw(GameTexture.ghostSprite, new Vector2(ToX(710),ToY(300+i*50)), new Rectangle(0 + 21 * x * 2, 0, 21, 19), Color.White, MathHelper.ToRadians(0), new Vector2(ToX(8f), ToY(10f)), 1f, ghosts[i].spriteDirection, 0);
-                    //spriteBatch.DrawString(GameTexture.spriteFont, ghosts[i].logicString, new Vector2(ToX(740), ToY(290 + i * 50)), Color.YellowGreen);
                 }
             }
             else
@@ -279,8 +276,6 @@ namespace Pac.Scene
                     if (pac.isPowerUpMode)
                         x = 4; 
                     spriteBatch.Draw(GameTexture.ghostSprite, new Vector2(ToX(ghosts[i].bound.X), ToY(ghosts[i].bound.Y)), new Rectangle(21 + 21 * 2 * x, 0,21,19), Color.White, MathHelper.ToRadians(0), new Vector2(ToX(8f), ToY(10f)),1f, ghosts[i].spriteDirection, 0);
-                    //spriteBatch.Draw(GameTexture.ghostSprite, new Vector2(ToX(710), ToY(300 + i * 50)), new Rectangle(21 + 21 * x * 2, 0, 21, 19), Color.White, MathHelper.ToRadians(0), new Vector2(ToX(8f), ToY(10f)), 1f, ghosts[i].spriteDirection, 0);
-                    //spriteBatch.DrawString(GameTexture.spriteFont, ghosts[i].logicString, new Vector2(ToX(740), ToY(290 + i * 50)), Color.YellowGreen);
                 }
             }
             if (timeup > 0.13f)

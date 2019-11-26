@@ -53,10 +53,6 @@ namespace Pac.Scene
                     }
                     return LoadingScene.GetInstance();
                 }
-                //else if (index == 1)
-                //    return InstructionScene.GetInstance(this);
-                //else if (index == 2)
-                //    return CreditScene.GetInstance(this);
                 else
                     return null;
             }

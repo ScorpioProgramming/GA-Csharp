@@ -7,12 +7,12 @@ using Pac.Constants;
 
 namespace Pac.Index
 {
-    /**
-     * BestPath is used to store the indexed paths in the Map. For given any two positions
-     * it stores the direction of the shortest path from the first position to the 
-     * second. It also gives the distance in terms of number of steps between the points.
-     * Generally it stores all paths from intersections to all other possible positions.
-     */
+    /// <summary>
+    /// BestPath is used to store the indexed paths in the Map. For given any two positions
+    /// it stores the direction of the shortest path from the first position to the
+    /// second.It also gives the distance in terms of number of steps between the points.
+    /// Generally it stores all paths from intersections to all other possible positions.
+    /// </summary>
     public class BestPath
     {
         public int x;
@@ -47,12 +47,14 @@ namespace Pac.Index
             FindShortest(x, y);
         }
         
-        /**
-         * Method used to compute the shortest paths between given position represented by i and j
-         * to all other possible valid positions using Djikstra's algorithm. This method populates 
-         * the shortestPath member with the shortest direction to take to reach other point.
-         */
-        private void FindShortest(int i, int j)
+         /// <summary>
+         /// Method used to compute the shortest paths between given position represented by i and j
+         /// to all other possible valid positions using Djikstra's algorithm. This method populates 
+         /// the shortestPath member with the shortest direction to take to reach other point.
+         /// </summary>
+         /// <param name="i"></param>
+         /// <param name="j"></param>
+    private void FindShortest(int i, int j)
         {
             Position pos = new Position();
             pos.weight = 0;
