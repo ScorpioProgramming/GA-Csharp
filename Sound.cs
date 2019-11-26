@@ -3,6 +3,10 @@ using Microsoft.Xna.Framework.Audio;
 
 namespace Pac.Resources
 {
+    /// <summary>
+    /// TODO:
+    /// If sounds not allowed to use change them to blank sounds
+    /// </summary>
     public class Sound
     {
         public SoundEffect soundE_pacdead, soundE_paceat, soundE_begin;

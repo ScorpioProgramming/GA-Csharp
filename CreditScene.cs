@@ -6,6 +6,10 @@ using Pac.Resources;
 
 namespace Pac.Scene
 {
+    /// <summary>
+    /// Not working. Might not implement it.
+    /// </summary>
+
     public class CreditScene : BaseScene
     {
         private static CreditScene instance;

@@ -26,7 +26,7 @@ namespace Pac.Index
             public int weight;
             public String dir;
             public Point p;
-        };
+        }
 
         public LinkedList<Position> waitingList = new LinkedList<Position>();  
 
