@@ -31,7 +31,7 @@ namespace Pac.App
 
         private void LoadHighScore()
         {
-            StreamReader r = null;
+            StreamReader r;
             try
             {
                 FileSecurity.DecryptFile(GameConstants.SAVE_FILE, "temp");
@@ -73,7 +73,7 @@ namespace Pac.App
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             GameTexture.loadTextures(this);
-            LoadHighScore();
+            //LoadHighScore();      // the streamreader started having problems tring to solve it
         }
 
         /// <summary>
