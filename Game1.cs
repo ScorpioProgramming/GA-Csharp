@@ -73,7 +73,7 @@ namespace Pac.App
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             GameTexture.loadTextures(this);
-            //LoadHighScore();      // the streamreader started having problems tring to solve it
+            //LoadHighScore();      // the streamreader started having problems trying to solve it
         }
 
         /// <summary>
