@@ -8,6 +8,13 @@ using Pac.App;
 
 namespace Pac.Scene
 {
+    /*public enum{
+        Start,
+        Instructions,
+        Credits,
+        Exit
+    } */
+
     public class MenuScene : BaseScene
     {
         private static MenuScene instance;
@@ -57,7 +64,7 @@ namespace Pac.Scene
                     return null;
             }
 
-            if(keyboardState.IsKeyDown(Keys.Down)&&(prev==null||prev.IsKeyUp(Keys.Down)))
+            if(keyboardState.IsKeyDown(Keys.Down) && (prev==null || prev.IsKeyUp(Keys.Down)))
             {
                 index = (index + 1) % 4;
             }
