@@ -16,7 +16,7 @@ namespace Pac.Scene
         static int width = GameConstants.TEXTURE_WIDTH, height = GameConstants.TEXTURE_HEIGHT;
 
         public Pacman pac;
-        Ghost[] ghosts = new Ghost[GameConstants.MAX_NO_OF_GHOSTS];
+        Ghost[] ghosts = new Ghost[(int)GameConstants.SpeednScore.Max_No_Of_Ghosts];
         Texture2D pacSprite = GameTexture.pacmanOpenSprite;
 
         bool flag = true;
@@ -40,13 +40,13 @@ namespace Pac.Scene
         public void Initialize(int level)
         {
             this.level = level;
-            if (level == 1) prevSpeed = GameConstants.GHOST_SPEED - GameConstants.SPEED_INC;
+            if (level == 1) prevSpeed = (int)GameConstants.SpeednScore.Ghost_Speed - (int)GameConstants.SpeednScore.Speed_Inc;
             pac = new Pacman();
-            int speed = prevSpeed + GameConstants.SPEED_INC;
+            int speed = prevSpeed + (int)GameConstants.SpeednScore.Speed_Inc;
             if (speed > pac.speed)
             {
-                speed = GameConstants.GHOST_SPEED;
-                if(GameConstants.NO_OF_GHOSTS < GameConstants.MAX_NO_OF_GHOSTS)
+                speed = (int)GameConstants.SpeednScore.Ghost_Speed;
+                if(GameConstants.NO_OF_GHOSTS < (int)GameConstants.SpeednScore.Max_No_Of_Ghosts)
                     GameConstants.NO_OF_GHOSTS++;
             }
             prevSpeed = speed;
@@ -169,7 +169,7 @@ namespace Pac.Scene
                 {
                     if (pac.isPowerUpMode)
                     {
-                        pac.score += GameConstants.GHOST_EAT_SCORE;
+                        pac.score += (int)GameConstants.SpeednScore.Ghost_Eat_Score;
                         ghosts[i].intializePosition(i);
                         Game1.sound.Eat();
                     }

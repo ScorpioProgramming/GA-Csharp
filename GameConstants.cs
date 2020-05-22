@@ -3,18 +3,20 @@ namespace Pac.Constants
 {
     public class GameConstants
     {
-        public static int PACMAN_SPEED = 100;
-        public static int GHOST_SPEED = 80;
-        public static int SPEED_INC = 10;
-
-        public static int POWER_UP_SPEED = PACMAN_SPEED + 20;
-        public static double POWER_UP_TIME = 6.0;
-        public static int PELLET_EAT_SCORE = 10;
-        public static int POWERUP_EAT_SCORE = 50;
-        public static int GHOST_EAT_SCORE = 100;
-
+        public enum SpeednScore
+        {
+            Speed_Inc = 10,
+            Pellet_Eat_Score = 10,
+            Max_No_Of_Ghosts = 20,
+            Powerup_Eat_Score = 50,
+            Ghost_Speed = 80,
+            Pacman_Speed = 100,
+            Ghost_Eat_Score = 100,
+            Power_Up_Speed = 120
+        }
+        
+        public static double POWER_UP_TIME = 8.0;
         public static int NO_OF_GHOSTS = 4;
-        public static int MAX_NO_OF_GHOSTS = 20;
         public static int NO_OF_LIVES = 3;
 
         public static byte MAP_WALL = 0;

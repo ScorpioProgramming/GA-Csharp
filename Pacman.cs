@@ -8,7 +8,7 @@ namespace Pac.Character
     public class Pacman : GameCharacter
     {
         public static Vector2 init = new Vector2(100+10+GameConstants.TEXTURE_WIDTH*13, 0+9+GameConstants.TEXTURE_HEIGHT*23);
-        public int score = -GameConstants.PELLET_EAT_SCORE;
+        public int score = -(int)GameConstants.SpeednScore.Pellet_Eat_Score;
         public bool isPowerUpMode = false;
         public double powerUpTime = GameConstants.POWER_UP_TIME;
         public int lives = GameConstants.NO_OF_LIVES;
@@ -21,13 +21,13 @@ namespace Pac.Character
         public Pacman()
         {
             bound = new Vector2(init.X, init.Y);
-            speed = GameConstants.PACMAN_SPEED;
+            speed = (int)GameConstants.SpeednScore.Pacman_Speed;
         }
 
         public Pacman(float x,float y)
         {
             bound = new Vector2(x, y);
-            speed = GameConstants.PACMAN_SPEED;
+            speed = (int)GameConstants.SpeednScore.Pacman_Speed;
         }
 
         public override void move(GameTime gameTime)
@@ -36,11 +36,11 @@ namespace Pac.Character
             {
                 if (speedX != 0)
                 {
-                    speedX = speedX < 0 ? -GameConstants.POWER_UP_SPEED : GameConstants.POWER_UP_SPEED;
+                    speedX = speedX < 0 ? -(int)GameConstants.SpeednScore.Power_Up_Speed : (int)GameConstants.SpeednScore.Power_Up_Speed;
                 }
                 if (speedY != 0)
                 {
-                    speedY = speedY < 0 ? -GameConstants.POWER_UP_SPEED : GameConstants.POWER_UP_SPEED;
+                    speedY = speedY < 0 ? -(int)GameConstants.SpeednScore.Power_Up_Speed : (int)GameConstants.SpeednScore.Power_Up_Speed;
                 }
             }
             bound.X += (float)gameTime.ElapsedGameTime.TotalSeconds * speedX;
@@ -63,7 +63,7 @@ namespace Pac.Character
             }
             else if (GameConstants.MAP[y1, x1] == GameConstants.MAP_POWERUP)
             {
-                this.score += GameConstants.POWERUP_EAT_SCORE;
+                this.score += (int)GameConstants.SpeednScore.Powerup_Eat_Score;
                 GameConstants.MAP[y1, x1] = GameConstants.MAP_EMPTY;
                 this.isPowerUpMode = true;
                 this.powerUpTime += GameConstants.POWER_UP_TIME;

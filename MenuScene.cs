@@ -7,14 +7,7 @@ using Pac.Resources;
 using Pac.App;
 
 namespace Pac.Scene
-{
-    /*public enum{
-        Start,
-        Instructions,
-        Credits,
-        Exit
-    } */
-
+{ 
     public class MenuScene : BaseScene
     {
         private static MenuScene instance;
